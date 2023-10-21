@@ -5,9 +5,9 @@ name: Swift
 
 on:
   push:
-    branches: [ "features/workflows" ]
+    branches: [ "master" ]
   pull_request:
-    branches: [ "features/workflows" ]
+    branches: [ "master" ]
 
 jobs:
   build:
