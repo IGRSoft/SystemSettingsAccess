@@ -48,6 +48,13 @@ SystemSettingsMain.appleID.open()
 ```
 Opens the Apple ID preferences
 
+## Requirements
+
+| Platform              | Minimum Swift Version | Installation          | Status                |
+| --------------------- | --------------------- | --------------------- | --------------------- |
+| macOS 13.0 | 5.8 | [Swift Package Manager](#swift-package-manager) | Fully Tested             |
+| macOS 14.0 | 5.9 | [Swift Package Manager](#swift-package-manager) | Fully Tested             |
+
 ## Installation
 
 ### Swift Package Manager
