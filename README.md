@@ -14,6 +14,7 @@ Paths to open some page of System Settings
 - SystemSettingsNetwork
 - SystemSettingsScreenTime
 - SystemSettingsSecurityPrivacy
+- SystemSettingsSecurityPrivacyProfile
 - SystemSettingsSharing
 - SystemSettingsSiri
 - SystemSettingsTouchIDPassword
