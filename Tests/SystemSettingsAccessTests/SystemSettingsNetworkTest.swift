@@ -7,7 +7,16 @@ final class SystemSettingsNetworkTest: XCTestCase {
         for key in SystemSettingsNetwork.allCases {
             XCTAssertFalse(String(describing: key).isEmpty)
             XCTAssertFalse(key.rawValue.isEmpty)
-            XCTAssertNotNil(key.path)
+            if #available(macOS 14.0, *) {
+                XCTAssertNotNil(key.path)
+            } else {
+                let ignoreList: [SystemSettingsNetwork] = [.wifi, .ethernetDetails, .modemDetails, .vpnDetails, .vpnOnDemand]
+                if ignoreList.contains(key) {
+                    XCTAssertNil(key.path)
+                } else {
+                    XCTAssertNotNil(key.path)
+                }
+            }
         }
     }
 }

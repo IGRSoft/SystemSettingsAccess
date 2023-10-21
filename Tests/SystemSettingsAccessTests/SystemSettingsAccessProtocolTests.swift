@@ -7,7 +7,11 @@ final class SystemSettingsAccessProtocolTests: XCTestCase {
     }
     
     func testPath_failed() throws {
-        XCTAssertNotNil(SystemSettingsFailedMock.test.path)
+        if #available(macOS 14.0, *) {
+            XCTAssertNotNil(SystemSettingsFailedMock.test.path)
+        } else {
+            XCTAssertNil(SystemSettingsFailedMock.test.path)
+        }
     }
     
     func testPath_internal_failed() throws {
